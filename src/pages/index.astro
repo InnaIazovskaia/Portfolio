@@ -4,6 +4,7 @@ import Contact from "../components/Contact/Contact.astro";
 import Home from "../components/Home/Home.astro";
 import NavBar from "../components/NavBar/NavBar.astro";
 import Projects from "../components/Projects/Projects.astro";
+import "@fontsource/heebo";
 ---
 
 <html lang="en">
@@ -11,6 +12,7 @@ import Projects from "../components/Projects/Projects.astro";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="" />
     <meta name="generator" content={Astro.generator} />
     <title>Inna Iazovskaia</title>
   </head>
@@ -30,8 +32,6 @@ import Projects from "../components/Projects/Projects.astro";
 </html>
 
 <style is:global>
-  @import url("/node_modules/@fontsource/heebo/400.css");
-
   :root {
     --background-color: #edf7fa;
   }
