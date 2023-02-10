@@ -1,0 +1,119 @@
+---
+import AboutMe from "../components/AboutMe/AboutMe.astro";
+import Contact from "../components/Contact/Contact.astro";
+import Home from "../components/Home/Home.astro";
+import NavBar from "../components/NavBar/NavBar.astro";
+import Projects from "../components/Projects/Projects.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Inna Iazovskaia</title>
+  </head>
+  <body>
+    <NavBar />
+    <Home />
+    <AboutMe />
+    <Projects />
+    <Contact />
+    <a class="arrow-up" href="#home"
+      ><img
+        src="images/circle-up.svg"
+        alt="Arrow to navigate up in the page"
+      /></a
+    >
+  </body>
+</html>
+
+<style is:global>
+  @import url("/node_modules/@fontsource/heebo/400.css");
+
+  :root {
+    --background-color: #edf7fa;
+  }
+
+  html {
+    font-size: medium;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  a,
+  a:focus,
+  a:active,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  body {
+    font-family: "Heebo", sans-serif;
+    min-height: 100vh;
+    overflow-y: scroll;
+  }
+
+  body::-webkit-scrollbar {
+    width: 0;
+  }
+
+  section {
+    padding: 35px 20px;
+  }
+
+  nav {
+    padding: 0 50px;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .arrow-up {
+    display: none;
+  }
+
+  @media screen and (min-width: 600px) {
+    p {
+      text-align: left;
+    }
+
+    section {
+      padding: 20px 100px;
+    }
+
+    .arrow-up {
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      right: 30px;
+      z-index: 99;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+  }
+</style>

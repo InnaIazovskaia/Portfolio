@@ -1,0 +1,60 @@
+---
+const getYear = () => {
+  const date = new Date();
+  return date.getFullYear();
+};
+---
+
+<footer id="contact">
+  <span class="">E-mail: <span class="email"> inna.0961@mail.ru</span></span>
+  <span class="">Social media accounts:</span>
+  <div class="logos">
+    <a href="https://github.com/InnaIazovskaia" target="_blank"
+      ><img
+        alt="github logo"
+        src="images/github.svg"
+        width="60"
+        height="60"
+      /></a
+    >
+    <a
+      href="https://www.linkedin.com/in/inna-iazovskaia-50b1b1231/"
+      target="_blank"
+      ><img
+        alt="linkedin logo"
+        src="images/linkedin.svg"
+        width="60"
+        height="60"
+      /></a
+    >
+  </div>
+  <span>Made by Inna Iazovskaia {getYear()}</span>
+</footer>
+
+<style>
+  footer {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-color: var(--background-color);
+    padding-top: 10px;
+    margin-top: 15px;
+  }
+
+  span {
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+  }
+
+  .logos {
+    display: flex;
+    gap: 20px;
+  }
+
+  .email {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+</style>

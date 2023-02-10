@@ -1,0 +1,27 @@
+---
+import ThematicSectionLayout from "../ThematicSectionLayout/ThematicSectionLayout.astro";
+---
+
+<ThematicSectionLayout id="about" title="About me" className="background-blue">
+  <p>
+    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+    Velit officia consequat duis enim velit mollit. Exercitation veniam
+    consequat sunt nostrud amet.
+  </p>
+</ThematicSectionLayout>
+
+<style>
+  .background-blue {
+    background-color: var(--background-color);
+  }
+
+  p {
+    font-weight: bold;
+  }
+
+  @media screen and (min-width: 600px) {
+    p {
+      margin-top: 25px;
+    }
+  }
+</style>

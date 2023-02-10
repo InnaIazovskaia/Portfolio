@@ -1,0 +1,75 @@
+<section id="home">
+  <div>
+    <h1>Hi, I am Inna</h1>
+    <p class="profession">Full Stack Web Developer</p>
+    <p>
+      I'm using the best tools, be it a reliable frameworks or the latest web
+      features.
+    </p>
+  </div>
+
+  <img src="images/photo.png" width="150" alt="Inna's photo" />
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 10px;
+  }
+
+  img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--background-color);
+  }
+
+  .profession {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-weight: bold;
+  }
+
+  @media screen and (min-width: 600px) {
+    section {
+      height: 500px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    div {
+      width: 55%;
+    }
+
+    h1 {
+      text-align: left;
+      padding-top: 0;
+    }
+  }
+
+  @media screen and (min-width: 600px && max-width: 710px) {
+    img {
+      width: 280px;
+      height: 280px;
+    }
+  }
+
+  @media screen and (min-width: 710px) {
+    img {
+      width: 310px;
+      height: 310px;
+    }
+  }
+</style>

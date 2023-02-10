@@ -1,0 +1,132 @@
+<nav>
+  <ul class="nav-links">
+    <input type="checkbox" id="checkbox_toggle" class="checkbox_toggle" />
+    <label for="checkbox_toggle" class="burger">
+      <span class="burger-line"></span>
+    </label>
+    <div class="menu">
+      <li><a href="#about">About me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li>
+        <a href="https://github.com/InnaIazovskaia" target="_blank">GitHub</a>
+      </li>
+    </div>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+
+  a,
+  a:visited {
+    font-size: var(--font-size-desktop);
+    font-weight: medium;
+  }
+
+  a:hover {
+    font-weight: bold;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+
+  .checkbox_toggle {
+    display: none;
+  }
+
+  .burger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .burger-line {
+    background-color: #000;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+  }
+
+  .burger-line::before,
+  .burger-line::after {
+    background-color: #000;
+    content: "";
+    display: block;
+    position: absolute;
+    transition: all 0.3s;
+    width: 100%;
+    height: 100%;
+  }
+
+  .burger-line::before {
+    top: 9px;
+  }
+
+  .burger-line::after {
+    top: -9px;
+  }
+
+  @media (max-width: 600px) {
+    .menu {
+      max-height: 0;
+      overflow: hidden;
+      position: absolute;
+      text-align: center;
+      right: 0;
+      left: 0;
+      background-color: #fff;
+    }
+
+    .menu li a {
+      display: block;
+      padding: 15px;
+    }
+
+    .menu li {
+      transition: all 0.5s;
+    }
+
+    .menu li:hover {
+      font-weight: bold;
+    }
+
+    .burger {
+      display: block;
+      padding: 20px 0;
+    }
+
+    .checkbox_toggle:checked ~ .menu {
+      display: block;
+      max-height: 100%;
+      transition: all 0.5s;
+    }
+
+    .checkbox_toggle:checked ~ .burger .burger-line {
+      background-color: transparent;
+    }
+
+    .checkbox_toggle:checked ~ .burger .burger-line::before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+
+    .checkbox_toggle:checked ~ .burger .burger-line::after {
+      transform: rotate(45deg);
+      top: 0;
+    }
+  }
+</style>
