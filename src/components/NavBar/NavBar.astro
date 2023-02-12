@@ -1,16 +1,14 @@
 <nav>
-  <ul class="nav-links">
-    <input type="checkbox" id="checkbox_toggle" class="checkbox_toggle" />
-    <label for="checkbox_toggle" class="burger">
-      <span class="burger-line"></span>
-    </label>
-    <div class="menu">
-      <li><a href="#about">About me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li>
-        <a href="https://github.com/InnaIazovskaia" target="_blank">GitHub</a>
-      </li>
-    </div>
+  <input type="checkbox" id="checkbox_toggle" class="checkbox_toggle" />
+  <label for="checkbox_toggle" class="burger">
+    <span class="burger-line"></span>
+  </label>
+  <ul class="menu">
+    <li><a href="#about">About me</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li>
+      <a href="https://github.com/InnaIazovskaia" target="_blank">GitHub</a>
+    </li>
   </ul>
 </nav>
 
@@ -29,18 +27,14 @@
     justify-content: flex-end;
   }
 
-  a,
-  a:visited {
-    font-size: var(--font-size-desktop);
-    font-weight: medium;
-  }
-
   a:hover {
     font-weight: bold;
   }
 
-  a {
+  a,
+  a:visited {
     font-size: 1.5rem;
+    font-weight: normal;
   }
 
   .checkbox_toggle {
