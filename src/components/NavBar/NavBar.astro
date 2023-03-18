@@ -1,126 +1,139 @@
+<input type="checkbox" id="toggle" />
+
 <nav>
-  <input type="checkbox" id="checkbox_toggle" class="checkbox_toggle" />
-  <label for="checkbox_toggle" class="burger">
-    <span class="burger-line"></span>
+  <label class="navbar-toggler" for="toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
   </label>
-  <ul class="menu">
-    <li><a href="#about">About me</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li>
-      <a href="https://github.com/InnaIazovskaia" target="_blank">GitHub</a>
+
+  <ul class="nav-list">
+    <li class="nav-item">
+      <a class="nav-link" href="#about">About me</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#projects">Projects</a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        href="https://github.com/InnaIazovskaia"
+        target="_blank">GitHub</a
+      >
     </li>
   </ul>
 </nav>
 
 <style>
   nav {
-    height: 80px;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: end;
+    height: 80px;
+    line-height: 80px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: sticky;
+    top: 0;
   }
 
-  .menu {
+  nav .nav-list {
     display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
   }
 
-  a:hover {
+  nav .nav-list .nav-item {
+    cursor: pointer;
+    height: 100%;
+    padding: 0 30px;
+    transition: 0.4s;
+  }
+
+  nav .nav-list .nav-item .nav-link:hover {
     font-weight: bold;
   }
 
-  a,
-  a:visited {
+  nav .nav-list .nav-item .nav-link,
+  nav .nav-list .nav-item .nav-link:visited {
     font-size: 1.5rem;
     font-weight: normal;
   }
 
-  .checkbox_toggle {
-    display: none;
+  nav .nav-list .nav-link {
+    font-size: 18px;
+    font-weight: 500;
   }
 
-  .burger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
+  @media (max-width: 935px) {
+    nav {
+      padding: 0 2rem;
+    }
+
+    nav .nav-list .nav-item {
+      padding: 0 20px;
+    }
   }
 
-  .burger-line {
-    background-color: #000;
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
-  }
-
-  .burger-line::before,
-  .burger-line::after {
-    background-color: #000;
-    content: "";
-    display: block;
-    position: absolute;
-    transition: all 0.3s;
-    width: 100%;
-    height: 100%;
-  }
-
-  .burger-line::before {
-    top: 9px;
-  }
-
-  .burger-line::after {
-    top: -9px;
-  }
-
-  @media (max-width: 600px) {
-    .menu {
-      max-height: 0;
-      overflow: hidden;
+  @media (max-width: 750px) {
+    nav .nav-list {
+      display: grid;
       position: absolute;
-      text-align: center;
-      right: 0;
+      overflow: hidden;
+      width: 100%;
+      top: 35px;
       left: 0;
+      transform: translateY(-100%);
+      z-index: -1;
+      transition: 0.6s;
       background-color: #fff;
     }
 
-    .menu li a {
-      display: block;
-      padding: 15px;
+    nav .nav-list .nav-item {
+      padding-left: 35px;
     }
 
-    .menu li {
-      transition: all 0.5s;
+    nav .navbar-toggler {
+      display: grid !important;
     }
+  }
 
-    .menu li:hover {
-      font-weight: bold;
-    }
+  nav .navbar-toggler {
+    display: none;
+    height: min-content;
+    margin: 18px -10px 0 0;
+    cursor: pointer;
+  }
 
-    .burger {
-      display: block;
-      padding: 20px 0;
-    }
+  nav .navbar-toggler .bar {
+    width: 40px;
+    height: 3px;
+    margin-bottom: 10px;
+    background: #000;
+    border-radius: 10%;
+    transition: 0.4s;
+  }
 
-    .checkbox_toggle:checked ~ .menu {
-      display: block;
-      max-height: 100%;
-      transition: all 0.5s;
-    }
+  input {
+    display: none;
+  }
 
-    .checkbox_toggle:checked ~ .burger .burger-line {
-      background-color: transparent;
-    }
+  input:checked ~ nav .nav-list {
+    transform: translateY(0);
+  }
 
-    .checkbox_toggle:checked ~ .burger .burger-line::before {
-      transform: rotate(-45deg);
-      top: 0;
-    }
+  input:checked ~ nav .navbar-toggler {
+    margin-top: 35px;
+  }
 
-    .checkbox_toggle:checked ~ .burger .burger-line::after {
-      transform: rotate(45deg);
-      top: 0;
-    }
+  input:checked ~ nav .navbar-toggler .bar:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg);
+  }
+
+  input:checked ~ nav .navbar-toggler .bar:nth-child(2) {
+    display: none;
+  }
+
+  input:checked ~ nav .navbar-toggler .bar:nth-child(3) {
+    transform: rotate(-45deg);
   }
 </style>
