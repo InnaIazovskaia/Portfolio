@@ -3,10 +3,31 @@ import ThematicSectionLayout from "../ThematicSectionLayout/ThematicSectionLayou
 ---
 
 <ThematicSectionLayout id="about" title="About me" className="background-blue">
-  <p>
-    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-    Velit officia consequat duis enim velit mollit. Exercitation veniam
-    consequat sunt nostrud amet.
+  <p class="about">
+    As a full-stack web developer, I can handle all aspects of web development,
+    including server-side programming, database management, and front-end
+    development. I have experience working with <span>Node.js</span> and web framework
+    <span>Express</span>. I have a strong understanding of <span>HTML</span>,
+    <span>CSS</span>, <span>JavaScript</span> and <span>TypeScript</span>, and I
+    stay up-to-date on the latest trends and best practices in web development.
+    I'm skilled in a variety of frameworks and libraries such as <span
+      >React</span
+    >, <span>Astro</span>, <span>React Native</span> and <span>Vue</span>, and I
+    use all my knowledge to create seamless user experiences.
+  </p>
+  <p class="about">
+    In addition to my technical skills, I also have excellent communication and
+    collaboration skills. I understand the importance of working closely with
+    clients and stakeholders to identify their requirements and deliver web
+    applications that meet their needs. I'm always happy to take on a new
+    challenge and work with teams to bring their ideas to life.
+  </p>
+  <p class="about">
+    I also take pride in writing clean, efficient, and maintainable code that is
+    easy to understand and modify. I'm a firm believer in the importance of
+    testing and debugging, and I use tools like <span>Jest</span>, <span
+      >Vitest</span
+    > and <span>Cypress</span> to ensure that my code is robust and error-free.
   </p>
 </ThematicSectionLayout>
 
@@ -15,13 +36,13 @@ import ThematicSectionLayout from "../ThematicSectionLayout/ThematicSectionLayou
     background-color: var(--background-color);
   }
 
-  p {
-    font-weight: bold;
+  .about {
+    margin-top: 25px;
+    text-align: justify;
   }
 
-  @media screen and (min-width: 600px) {
-    p {
-      margin-top: 25px;
-    }
+  span {
+    font-weight: bold;
+    text-decoration: underline;
   }
 </style>
