@@ -6,6 +6,9 @@
       I'm using the best tools, be it a reliable frameworks or the latest web
       features.
     </p>
+    <a href="src/data/innaiazovskaia.docx" download class="download"
+      >Download resume</a
+    >
   </div>
 
   <img src="images/photo.png" width="150" alt="Inna's photo" />
@@ -15,6 +18,12 @@
   section {
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
@@ -41,6 +50,21 @@
     font-weight: bold;
   }
 
+  .download {
+    width: 210px;
+    margin: 40px 0;
+    background-color: #ff6464;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .download:focus {
+    color: #fff;
+  }
+
   @media screen and (min-width: 750px) {
     section {
       height: 500px;
@@ -51,6 +75,7 @@
 
     div {
       width: 55%;
+      align-items: flex-start;
     }
 
     h1 {
