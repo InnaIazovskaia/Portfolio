@@ -1,12 +1,21 @@
 ---
 import ProjectCard from "../ProjectCard/ProjectCard.astro";
 import ThematicSectionLayout from "../ThematicSectionLayout/ThematicSectionLayout.astro";
-import projects from "../../data/projects.json";
+import projects from "../../../public/data/projects.json";
+
+interface Project {
+  img: string;
+  projectName: string;
+  usedTechnologies: string[];
+  projectDescription: string;
+  production: string;
+  repoGitHub: string;
+}
 ---
 
 <ThematicSectionLayout id="projects" title="Projects" className="">
   <ul>
-    {projects.map((project) => <ProjectCard project={project} />)}
+    {projects.map((project: Project) => <ProjectCard project={project} />)}
   </ul>
 </ThematicSectionLayout>
 
